@@ -5,7 +5,6 @@ import com.google.inject.*;
 import javax.inject.Singleton;
 
 public final class NSPOFModule<T> extends AbstractModule {
-
     private NSPOFModule() {
 
     }

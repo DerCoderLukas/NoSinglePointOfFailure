@@ -7,32 +7,32 @@ import java.util.List;
 import java.util.Set;
 
 public final class NSPOFNodeRegistry<T> {
-    private final Set<NSPOFNode<T>> nspofNodes;
+  private final Set<NSPOFNode<T>> nspofNodes;
 
-    private NSPOFNodeRegistry(Set<NSPOFNode<T>> nspofNodes) {
-        this.nspofNodes = nspofNodes;
-    }
+  private NSPOFNodeRegistry(Set<NSPOFNode<T>> nspofNodes) {
+    this.nspofNodes = nspofNodes;
+  }
 
-    public void register(NSPOFNode<T> nspofNode) {
-        Preconditions.checkNotNull(nspofNode);
-        nspofNodes.add(nspofNode);
-    }
+  public void register(NSPOFNode<T> nspofNode) {
+    Preconditions.checkNotNull(nspofNode);
+    nspofNodes.add(nspofNode);
+  }
 
-    public void unregister(NSPOFNode<T> nspofNode) {
-        Preconditions.checkNotNull(nspofNode);
-        nspofNodes.remove(nspofNode);
-    }
+  public void unregister(NSPOFNode<T> nspofNode) {
+    Preconditions.checkNotNull(nspofNode);
+    nspofNodes.remove(nspofNode);
+  }
 
-    public boolean contains(NSPOFNode nspofNode) {
-        Preconditions.checkNotNull(nspofNode);
-        return nspofNodes.contains(nspofNode);
-    }
+  public boolean contains(NSPOFNode nspofNode) {
+    Preconditions.checkNotNull(nspofNode);
+    return nspofNodes.contains(nspofNode);
+  }
 
-    public List<NSPOFNode<T>> findAll() {
-        return List.copyOf(nspofNodes);
-    }
+  public List<NSPOFNode<T>> findAll() {
+    return List.copyOf(nspofNodes);
+  }
 
-    public static <T> NSPOFNodeRegistry<T> empty() {
-        return new NSPOFNodeRegistry<T>(Sets.newHashSet());
-    }
+  public static <T> NSPOFNodeRegistry<T> empty() {
+    return new NSPOFNodeRegistry<T>(Sets.newHashSet());
+  }
 }

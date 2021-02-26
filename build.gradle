@@ -17,7 +17,7 @@ dependencies {
   testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
   testImplementation 'org.mockito:mockito-junit-jupiter:3.6.0'
 
-  implementation 'com.google.inject:guice:4.2.3'
+  implementation 'com.google.inject:guice:5.0.0'
 }
 
 java {
